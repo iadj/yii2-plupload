@@ -1,6 +1,6 @@
 <?php
 
-namespace boundstate\plupload;
+namespace iadj\plupload;
 
 use Yii;
 use yii\base\Action;
