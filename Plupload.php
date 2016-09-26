@@ -29,6 +29,8 @@ class Plupload extends Widget
 	
 	public $htmlOptions = [];
 	
+	public $object_id;
+	
 	/**
 	 * The label to display on the browse link.
 	 * @var string
