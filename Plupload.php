@@ -25,6 +25,8 @@ class Plupload extends Widget
 	 */
 	public $url;
 	
+	public $id;
+	
 	public $htmlOptions = [];
 	
 	/**
@@ -80,6 +82,9 @@ class Plupload extends Widget
      */
     public function init()
 	{
+		if(empty($this->object_id))
+			$this->object_id = $this->getId();
+		$object_id = $this->object_id;
 		// Make sure URL is provided
 		if (empty($this->url))
 			throw new Exception(Yii::t('yii','{class} must specify "url" property value.',array('{class}'=>get_class($this))));
@@ -124,8 +129,8 @@ class Plupload extends Widget
 		// Generate event JavaScript
 		$events = '';
 		foreach ($this->events as $event => $callback)
-            $events .= "uploader.bind('$event', $callback);\n";
+            $events .= "uploader$object_id.bind('$event', $callback);\n";
 
-		$this->view->registerJs("var uploader = new plupload.Uploader($options);\nuploader.init();\n$events");
+		$this->view->registerJs("var uploader$object_id = new plupload.Uploader($options);\nuploader$object_id.init();\n$events");
 	}
 }
