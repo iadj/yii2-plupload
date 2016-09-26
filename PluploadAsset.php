@@ -1,6 +1,6 @@
 <?php
 
-namespace boundstate\plupload;
+namespace iadj\plupload;
 
 use yii\web\AssetBundle;
 
