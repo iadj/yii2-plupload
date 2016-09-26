@@ -9,13 +9,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```sh
-php composer.phar require --prefer-dist boundstate/yii2-plupload "*"
+php composer.phar require --prefer-dist iadj/yii2-plupload "*"
 ```
 
 or add
 
 ```
-"boundstate/yii2-plupload": "*"
+"iadj/yii2-plupload": "*"
 ```
 
 to the require section of your `composer.json` file.
