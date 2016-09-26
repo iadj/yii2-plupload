@@ -25,6 +25,8 @@ class Plupload extends Widget
 	 */
 	public $url;
 	
+	public $multipartParams = [];
+	
 	public $id;
 	
 	public $htmlOptions = [];
@@ -104,6 +106,8 @@ class Plupload extends Widget
 
 		if (!isset($this->options['multipart_params']))
 			$this->options['multipart_params'] = [];
+		
+		        $this->options['multipart_params'] = $this->multipartParams;
 
 		$this->options['multipart_params'][Yii::$app->request->csrfParam] = Yii::$app->request->csrfToken;
 
