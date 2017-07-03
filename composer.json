@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "iadj\\plupload\\": ""
+            "iadj\\plupload\\": "2.3.1"
         }
     }
 }
