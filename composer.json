@@ -14,11 +14,11 @@
         }
     ],
     "require": {
-        "moxiecode/plupload": "*"
+        "moxiecode/plupload": "2.3.1"
     },
     "autoload": {
         "psr-4": {
-            "iadj\\plupload\\": "2.3.1"
+            "iadj\\plupload\\": ""
         }
     }
 }
